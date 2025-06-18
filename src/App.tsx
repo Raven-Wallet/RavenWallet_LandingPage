@@ -6,7 +6,7 @@ import Features from './components/Features'
 import AppShowcase from './components/AppShowcase'
 import Footer from './components/Footer'
 import KairosNavbar from './components/Navbar'
-
+import Apputil from './components/apputil'
 function App() {
 
   return (
@@ -23,6 +23,7 @@ function App() {
 
       <KairosNavbar />
       <Hero />
+      <Apputil/>
       <Revolution />
       <Features />
       <AppShowcase />

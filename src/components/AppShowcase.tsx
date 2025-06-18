@@ -2,9 +2,9 @@ import { Download, ExternalLink, Star, Smartphone, Monitor, ArrowRight } from 'l
 
 const AppShowcase = () => {
   return (
-    <section className="py-24 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+    <section className="py-10 px-4 bg-white">
+      <div className="max-w-[1400px] mx-auto">
+        <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-black/5 backdrop-blur-sm border border-black/10 rounded-full px-4 py-2 mb-6 transform hover:scale-105 transition-transform duration-200">
             <Smartphone className="h-4 w-4 text-black" />
             <span className="text-sm font-medium text-black">Multi-Platform</span>
@@ -17,100 +17,106 @@ const AppShowcase = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Web Platform */}
-          <div className="bg-gradient-to-br from-black via-gray-900 to-black border border-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl h-48 flex items-center justify-center mb-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/10 rounded-2xl mx-auto flex items-center justify-center mb-4 shadow-lg">
-                  <Monitor className="h-8 w-8 text-white" />
+          <div className="bg-gradient-to-br from-black via-gray-900 to-black border border-gray-800 rounded-2xl p-12 shadow-xl hover:shadow-2xl transition-all duration-300 aspect-square">
+            <div className="h-full flex flex-col">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl h-48 flex items-center justify-center mb-12">
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white/10 rounded-2xl mx-auto flex items-center justify-center mb-6 shadow-lg">
+                    <Monitor className="h-12 w-12 text-white" />
+                  </div>
+                  <h4 className="text-2xl font-semibold text-white">Web Platform</h4>
+                  <p className="text-gray-300 text-lg">Full desktop experience</p>
                 </div>
-                <h4 className="text-lg font-semibold text-white">Web Platform</h4>
-                <p className="text-gray-300">Full desktop experience</p>
               </div>
-            </div>
-            
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                ))}
+              
+              <div className="flex items-center gap-2 mb-8">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <span className="text-base text-gray-300">4.9/5 • 12K+ reviews</span>
               </div>
-              <span className="text-sm text-gray-300">4.9/5 • 12K+ reviews</span>
+              
+              <h3 className="text-4xl font-semibold mb-6 text-white">Professional Web Wallet</h3>
+              <p className="text-gray-300 text-2xl mb-12 flex-grow leading-relaxed">
+                Advanced trading interface with institutional-grade features for DeFi operations.
+              </p>
+              
+              <button className="w-full bg-white text-black font-medium py-4 px-6 rounded-xl hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-3 text-lg">
+                <ExternalLink className="h-5 w-5" />
+                Launch Web Platform
+                <ArrowRight className="h-5 w-5" />
+              </button>
             </div>
-            
-            <h3 className="text-2xl font-semibold mb-3 text-white">Professional Web Wallet</h3>
-            <p className="text-gray-300 mb-6">
-              Advanced trading interface with institutional-grade features for DeFi operations.
-            </p>
-            
-            <button className="w-full bg-white text-black font-medium py-3.5 px-6 rounded-xl hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
-              <ExternalLink className="h-4 w-4" />
-              Launch Web Platform
-              <ArrowRight className="h-4 w-4" />
-            </button>
           </div>
 
           {/* Mobile Apps */}
-          <div className="bg-gradient-to-br from-black via-gray-900 to-black border border-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl h-48 flex items-center justify-center mb-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/10 rounded-2xl mx-auto flex items-center justify-center mb-4 shadow-lg relative">
-                  <Smartphone className="h-8 w-8 text-white" />
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full flex items-center justify-center shadow-md">
-                    <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+          <div className="bg-gradient-to-br from-black via-gray-900 to-black border border-gray-800 rounded-2xl p-12 shadow-xl hover:shadow-2xl transition-all duration-300 aspect-square">
+            <div className="h-full flex flex-col">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl h-48 flex items-center justify-center mb-12">
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white/10 rounded-2xl mx-auto flex items-center justify-center mb-6 shadow-lg relative">
+                    <Smartphone className="h-12 w-12 text-white" />
+                    <div className="absolute -top-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center shadow-md">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
                   </div>
+                  <h4 className="text-2xl font-semibold text-white">Mobile Apps</h4>
+                  <p className="text-gray-300 text-lg">iOS & Android native</p>
                 </div>
-                <h4 className="text-lg font-semibold text-white">Mobile Apps</h4>
-                <p className="text-gray-300">iOS & Android native</p>
               </div>
-            </div>
-            
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                ))}
+              
+              <div className="flex items-center gap-2 mb-8">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <span className="text-base text-gray-300">4.8/5 • 45K+ reviews</span>
               </div>
-              <span className="text-sm text-gray-300">4.8/5 • 45K+ reviews</span>
-            </div>
-            
-            <h3 className="text-2xl font-semibold mb-3 text-white">Native Mobile Experience</h3>
-            <p className="text-gray-300 mb-6">
-              Biometric authentication, push notifications, and offline transaction signing.
-            </p>
-            
-            <div className="flex gap-3">
-              <button className="flex-1 bg-white text-black font-medium py-3.5 px-4 rounded-xl hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                <Download className="h-4 w-4" />
-                iOS App
-              </button>
-              <button className="flex-1 bg-white text-black font-medium py-3.5 px-4 rounded-xl hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                <Download className="h-4 w-4" />
-                Android
-              </button>
+              
+              <h3 className="text-4xl font-semibold mb-6 text-white">Native Mobile Experience</h3>
+              <p className="text-gray-300 text-2xl mb-12 flex-grow leading-relaxed">
+                Biometric authentication, push notifications, and offline transaction signing.
+              </p>
+              
+              <div className="flex gap-4">
+                <button className="flex-1 bg-white text-black font-medium py-4 px-6 rounded-xl hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-3 text-lg">
+                  <Download className="h-5 w-5" />
+                  iOS App
+                </button>
+                <button className="flex-1 bg-white text-black font-medium py-4 px-6 rounded-xl hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-3 text-lg">
+                  <Download className="h-5 w-5" />
+                  Android
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Stats */}
-        <div className="mt-16 bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl p-8 shadow-2xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="transform hover:scale-105 transition-transform duration-200">
-              <div className="text-2xl font-bold text-white mb-1">99.99%</div>
-              <div className="text-sm text-gray-300">Uptime</div>
-            </div>
-            <div className="transform hover:scale-105 transition-transform duration-200">
-              <div className="text-2xl font-bold text-white mb-1">&lt;400ms</div>
-              <div className="text-sm text-gray-300">Speed</div>
-            </div>
-            <div className="transform hover:scale-105 transition-transform duration-200">
-              <div className="text-2xl font-bold text-white mb-1">$2.8B+</div>
-              <div className="text-sm text-gray-300">Secured</div>
-            </div>
-            <div className="transform hover:scale-105 transition-transform duration-200">
-              <div className="text-2xl font-bold text-white mb-1">500K+</div>
-              <div className="text-sm text-gray-300">Users</div>
+        <div className="mt-16">
+          <div className="bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl p-12 shadow-2xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+              <div className="transform hover:scale-105 transition-transform duration-200">
+                <div className="text-4xl font-bold text-white mb-2">99.99%</div>
+                <div className="text-lg text-gray-300">Uptime</div>
+              </div>
+              <div className="transform hover:scale-105 transition-transform duration-200">
+                <div className="text-4xl font-bold text-white mb-2">&lt;400ms</div>
+                <div className="text-lg text-gray-300">Speed</div>
+              </div>
+              <div className="transform hover:scale-105 transition-transform duration-200">
+                <div className="text-4xl font-bold text-white mb-2">$2.8B+</div>
+                <div className="text-lg text-gray-300">Secured</div>
+              </div>
+              <div className="transform hover:scale-105 transition-transform duration-200">
+                <div className="text-4xl font-bold text-white mb-2">500K+</div>
+                <div className="text-lg text-gray-300">Users</div>
+              </div>
             </div>
           </div>
         </div>

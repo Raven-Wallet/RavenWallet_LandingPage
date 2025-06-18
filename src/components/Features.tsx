@@ -35,9 +35,9 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-muted/20">
-      <div className="max-w-8xl mx-auto">
-        <div className="text-center mb-20">
+    <section className="py-32 px-0 sm:px-0 lg:px-0 overflow-hidden">
+      <div className="max-w-[100vw] mx-auto">
+        <div className="text-center mb-10 px-4">
           <div className="inline-flex items-center gap-2 bg-primary/5 border border-primary/10 rounded-full px-4 py-2 mb-6">
             <Award className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">Enterprise Features</span>
@@ -50,23 +50,43 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div 
-              key={index} 
-              className="p-10 bg-gradient-to-br from-black to-gray-900  h-full flex flex-col bg-card border border-border rounded-xl hover:shadow-lg transition-all duration-300"
-            >
-              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                <feature.icon className="h-7 w-7   text-white" />
-              </div>
-              <h3 className="text-2xl text-white font-semibold mb-4">{feature.title}</h3>
-              <p className="text-muted-foreground text-white text-lg leading-relaxed">
-                {feature.description}
-              </p>
+        <div className="relative">
+          <div className="overflow-x-auto pb-16 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory">
+            <div className="flex gap-16 min-w-max pl-[calc(50vw-400px)] pr-[calc(50vw-500px)] py-8">
+              {features.map((feature, index) => (
+                <div 
+                  key={index} 
+                  className="bg-gradient-to-br from-black to-gray-900 rounded-2xl p-16 border border-gray-800 hover:border-gray-700 transition-all duration-300 hover:shadow-2xl w-[500px] h-[700px] flex flex-col snap-center hover-animate-jump-shake"
+                >
+                  <div className="w-24 h-24 bg-gray-900 rounded-xl flex items-center justify-center mb-12">
+                    <feature.icon className="h-12 w-12 text-white" />
+                  </div>
+                  <h3 className="text-4xl text-white font-semibold mb-10">{feature.title}</h3>
+                  <p className="text-gray-300 text-2xl leading-relaxed flex-grow">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes jump-shake {
+          0% { transform: translateY(0) rotate(0deg); }
+          25% { transform: translateY(-30px) rotate(5deg); }
+          50% { transform: translateY(0) rotate(0deg); }
+          75% { transform: translateY(-15px) rotate(-5deg); }
+          85% { transform: translateY(0) rotate(2deg); }
+          92% { transform: translateY(-7px) rotate(-2deg); }
+          100% { transform: translateY(0) rotate(0deg); }
+        }
+        .hover-animate-jump-shake:hover {
+          animation: jump-shake 0.8s ease;
+          transform-origin: center bottom;
+        }
+      `}</style>
     </section>
   );
 };

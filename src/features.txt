@@ -1,0 +1,31 @@
+# Raven Wallet Features
+
+## Core Features
+- Built on Solana blockchain for high-performance transactions
+- Seamless access to decentralized applications (DApps)
+- Comprehensive transaction history monitoring
+- Unlimited transactions and token balance tracking
+
+## Security Features
+- Advanced encryption for wallet security
+- Multi-signature support
+- Secure key management
+- Regular security audits
+
+## User Experience
+- Intuitive and modern interface
+- Real-time transaction updates
+- Cross-platform compatibility
+- Responsive design for all devices
+
+## Technical Features
+- High-speed transaction processing
+- Low transaction fees
+- Smart contract integration
+- API support for developers
+
+## Additional Benefits
+- 24/7 customer support
+- Regular feature updates
+- Community-driven development
+- Extensive documentation 
